@@ -1,0 +1,9 @@
+1. Scenario: Simulate a network failure.
+- Inject a delay of 5 seconds into the API response for order submission.
+- Validate that user receives a timeout error.
+2. Scenario: Simulate an API endpoint failure.
+- Make the `/api/orders` endpoint return a 500 Internal Server Error.
+- Validate that the client handles the error gracefully.
+3. Scenario: Simulate database unavailability.
+- Temporarily disrupt the connection to the MongoDB database.
+- Validate that the order submission fails with a proper error message.
