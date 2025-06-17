@@ -1,0 +1,10 @@
+# JMETER Script for Load Testing
+Thread Group (5000 users)
+Loop Count: 1
+Ramp-Up Period: 120 seconds
+HTTP Request Sampler
+URL: http:#api_url/api/orders
+Method: DELETE
+Body: { "id": "order_id" }
+Response Assertion: Check for response code 200
+Summary Report: Save test results

@@ -1,0 +1,10 @@
+- hosts: all
+tasks:
+- name: Deploy application
+copy:
+src: /path/to/source
+dest: /path/to/destination
+- name: Start application
+systemd:
+name: myapp.service
+state: started

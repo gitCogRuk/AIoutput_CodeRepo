@@ -1,0 +1,19 @@
+# Dockerfile for application
+FROM openjdk:11-jre
+WORKDIR /app
+COPY target/myapp.jar /app/myapp.jar
+CMD ["java", "-jar", "myapp.jar"]
+# docker-compose.yml
+version: '3'
+services:
+myapp:
+build: .
+ports:
+- "8080:8080"
+environment:
+- DATABASE_URL=jdbc:mysql:#db:3306/app
+db:
+image: mysql
+environment:
+MYSQL_DATABASE: app
+MYSQL_ROOT_PASSWORD: root

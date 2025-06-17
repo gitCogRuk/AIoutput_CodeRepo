@@ -1,0 +1,6 @@
+# Chaos Engineering Scenario
+1. Deploy the application in a high-availability mode with multiple instances.
+2. Introduce latency in the database layer for 10% of requests.
+3. Randomly kill 1 out of 3 service instances.
+4. Monitor the system's ability to delete orders even with these injected failures.
+5. Validate if the system remains resilient and responsive to user requests during the chaos experiments.
