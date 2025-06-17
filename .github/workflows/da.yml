@@ -1,0 +1,14 @@
+- hosts: all
+tasks:
+- name: Ensure the application is running
+service:
+name: myapp
+state: started
+- name: Deploy new version
+copy:
+src: /path/to/app
+dest: /path/to/deploy
+- name: Restart application
+service:
+name: myapp
+state: restarted
