@@ -1,0 +1,17 @@
+---
+- name: Deploy pacs.008 Application
+hosts: app_servers
+tasks:
+- name: Pull latest code from Git
+git:
+repo: 'https:#github.com/your-repo/pacs-xml-generator.git'
+dest: /opt/pacs-xml-generator
+version: main
+- name: Build application
+command: mvn clean install
+args:
+chdir: /opt/pacs-xml-generator
+- name: Start application
+systemd:
+name: pacs-xml-generator
+state: started

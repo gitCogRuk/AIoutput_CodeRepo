@@ -1,0 +1,14 @@
+Test Plan
+Thread Group
+Number of Threads: 5000
+Ramp-Up Period: 60 seconds
+Loop Count: Forever
+HTTP Request Defaults
+Server Name or IP: yourapi.com
+Path: /api/generate-pacs008
+HTTP Request
+Method: POST
+Body Data: {"MsgId":"12345","CreDtTm":"2023-10-01T12:00:00Z","PmtId":"98765","Amt":"1000","Ccy":"USD"}
+Response Assertion
+Response Field: Response Code
+Response Code: 200

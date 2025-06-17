@@ -1,0 +1,6 @@
+# Chaos Monkey Script Example
+# Ensure you have Chaos Monkey installed and configured
+# Shutdown a random service in your microservices architecture
+chaos-monkey shutdown-service --service-name "pacs-xml-generator"
+# Introduce latency in database calls
+chaos-monkey introduce-latency --service-name "pacs-xml-generator" --duration 5000

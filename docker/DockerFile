@@ -1,0 +1,5 @@
+# Dockerfile for pacs.008 XML Generator
+FROM openjdk:11-jre-slim
+WORKDIR /app
+COPY target/pacs-xml-generator.jar /app/pacs-xml-generator.jar
+CMD ["java", "-jar", "pacs-xml-generator.jar"]
