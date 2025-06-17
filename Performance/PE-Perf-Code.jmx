@@ -1,0 +1,19 @@
+Thread Group:
+Number of Threads (users): 5000
+Ramp-Up Period (seconds): 120
+Loop Count: Infinite (or set a specific number for soak testing)
+HTTP Request Defaults:
+Server Name or IP: your.api.endpoint
+HTTP Request: POST
+Path: /api/portfolio/create
+Body Data: {
+"serviceType": "Corporation of Lloyds",
+"colMember": "ABC123",
+"colSettlementAcc": "1234567890"
+}
+Response Assertion:
+Response Field: Response Code
+Pattern Matching Rules: Equals
+Patterns to Test: 200
+View Results Tree:
+Save responses to file for analysis if needed.

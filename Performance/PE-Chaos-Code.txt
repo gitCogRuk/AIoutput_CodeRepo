@@ -1,0 +1,19 @@
+{
+"scenarios": [
+{
+"name": "Simulate API latency",
+"description": "Introduce artificial latency to API calls",
+"type": "latency",
+"duration": "10s",
+"endpoint": "/api/portfolio/create",
+"latency": "5s"
+},
+{
+"name": "Simulate database disconnection",
+"description": "Disconnect database during a request",
+"type": "database",
+"duration": "15s",
+"endpoint": "/api/portfolio/create"
+}
+]
+}

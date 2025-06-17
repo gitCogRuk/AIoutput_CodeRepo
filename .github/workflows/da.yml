@@ -1,0 +1,12 @@
+---
+- hosts: all
+tasks:
+- name: Deploy Portfolio Service
+docker_container:
+name: portfolio-service
+image: portfolio-service:latest
+state: started
+restart_policy: always
+ports:
+- "8080:8080"
+become: true
