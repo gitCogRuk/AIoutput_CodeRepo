@@ -1,0 +1,13 @@
+Test Plan
+Thread Group
+Number of Threads: 5000
+Ramp-Up Period: 600 seconds
+Loop Count: Forever
+HTTP Request
+URL: http:#yourapi.com/api/orders
+Method: POST
+Body Data: {"orderInstrument": "InstrumentA", "portfolioType": "ISA"}
+Response Assertion
+Contains: "Order created successfully"
+Summary Report
+View Results Tree

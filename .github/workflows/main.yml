@@ -1,0 +1,38 @@
+name: CI
+'on':
+- push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+    - name: Trigger UIUX Code
+      run: node "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/UI-UX
+        Designer/UIUX-Code.js"
+    - name: Trigger Frontend Code
+      run: node "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Front
+        End/FE-Code.js"
+    - name: Compile Backend Code
+      run: javac "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Back
+        End/BE-Code.java" && java -cp "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Back
+        End/Back End" BE-Code
+    - name: Run BDD Tests
+      run: behave "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Automation/AE-BDD-Code.feature"
+    - name: Run WUI Code
+      run: dotnet run "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Automation/AE-WUI-Code.cs"
+    - name: Run RPI Code
+      run: dotnet run "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Automation/AE-RPI-Code.cs"
+    - name: Run Performance Tests
+      run: jmeter -n -t "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Performance/PE-Perf-Code.jmx"
+    - name: Run Chaos Tests
+      run: python "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/Performance/PE-Chaos-Code.txt"
+    - name: Run Ansible Playbook
+      run: ansible-playbook "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/.github/workflows/da.yml"
+    - name: Build Docker Image
+      run: docker build -f "C:/Users/158949/PycharmProjects/LLMOutputs/coderepo/AIoutput_CodeRepo/.github/workflows/DockerFile"
+        .

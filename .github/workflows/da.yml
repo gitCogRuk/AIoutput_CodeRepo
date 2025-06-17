@@ -1,0 +1,16 @@
+- name: Deploy Application
+hosts: webservers
+tasks:
+- name: Pull latest code from Git
+git:
+repo: 'https:#github.com/yourrepo.git'
+dest: /var/www/app
+version: master
+- name: Install dependencies
+command: npm install
+args:
+chdir: /var/www/app
+- name: Start application
+command: npm start
+args:
+chdir: /var/www/app

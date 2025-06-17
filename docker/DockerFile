@@ -1,0 +1,12 @@
+FROM openjdk:11-jre-slim
+COPY target/myapp.jar /usr/app/myapp.jar
+WORKDIR /usr/app
+CMD ["java", "-jar", "myapp.jar"]
+version: '3'
+services:
+myapp:
+build: .
+ports:
+- "8080:8080"
+environment:
+- SPRING_PROFILES_ACTIVE=prod
