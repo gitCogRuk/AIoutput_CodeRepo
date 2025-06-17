@@ -1,0 +1,14 @@
+# Dockerfile for SEPA Instant Payment Service
+FROM openjdk:11-jre-slim
+WORKDIR /app
+COPY target/sepa-instant-payments.jar sepa-instant-payments.jar
+ENTRYPOINT ["java", "-jar", "sepa-instant-payments.jar"]
+# Docker Compose
+version: '3.8'
+services:
+sepa-instant-payments:
+build: .
+ports:
+- "8080:8080"
+environment:
+- SPRING_PROFILES_ACTIVE=prod

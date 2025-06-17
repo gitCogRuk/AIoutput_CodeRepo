@@ -1,0 +1,12 @@
+TestPlan
+ThreadGroup
+Name: Load Test for SEPA Instant Payments
+Number of Threads (users): 5000
+Ramp-Up Period (seconds): 60
+Loop Count: 10
+HTTP Request Sampler
+Name: SEPA Instant Payment Request
+Method: POST
+URL: https:#yourbank.com/api/payments/instant
+Body Data: {"amount": 1000, "currency": "EUR"}
+View Results Tree

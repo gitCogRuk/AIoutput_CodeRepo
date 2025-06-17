@@ -1,0 +1,16 @@
+- name: Deploy SEPA Instant Payment Service
+hosts: production
+tasks:
+- name: Pull latest code from repository
+git:
+repo: 'https:#github.com/yourorg/sepa-instant-payments.git'
+dest: /opt/sepa-instant-payments
+version: main
+- name: Build the application
+command: mvn clean package
+args:
+chdir: /opt/sepa-instant-payments
+- name: Restart payment service
+systemd:
+name: sepa-instant-payments
+state: restarted

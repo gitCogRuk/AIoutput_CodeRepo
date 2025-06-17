@@ -1,0 +1,8 @@
+1. Network Latency Simulation:
+- Introduce random network delays ranging from 100ms to 5 seconds on the payment processing endpoint.
+2. Service Outage Simulation:
+- Randomly shut down the payment processing service for 30 seconds during peak loads.
+3. Database Latency Simulation:
+- Introduce artificial delays in database responses for transaction confirmation to test error handling and timeouts.
+4. Load Test Configuration:
+- Conduct tests under normal load (5000 users) and simulate chaos scenarios to observe system resilience and recovery capabilities.
