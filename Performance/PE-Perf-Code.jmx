@@ -1,0 +1,17 @@
+Thread Group:
+Number of Threads (users): 5000
+Ramp-Up Period (seconds): 60
+Loop Count: Forever
+HTTP Request Defaults:
+Server Name or IP: your.api.endpoint
+Path: /api/bank-accounts/add
+HTTP Request:
+Method: POST
+Body Data:
+{
+"externalId": "validId"
+}
+Response Assertion:
+Response Field: Response Code
+Pattern Matching Rules: Equals
+Patterns to Test: 200

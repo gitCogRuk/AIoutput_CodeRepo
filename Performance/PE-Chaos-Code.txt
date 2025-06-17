@@ -1,0 +1,10 @@
+{
+"scenario": "Simulate network latency",
+"duration": "PT30M",
+"chaos": {
+"type": "latency",
+"target": "API",
+"duration": "PT5S",
+"percentage": 25
+}
+}

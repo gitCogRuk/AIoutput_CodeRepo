@@ -1,0 +1,4 @@
+FROM openjdk:11-jre
+COPY target/my_application.jar /usr/app/my_application.jar
+WORKDIR /usr/app
+CMD ["java", "-jar", "my_application.jar"]

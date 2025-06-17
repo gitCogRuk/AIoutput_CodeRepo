@@ -1,0 +1,11 @@
+---
+- hosts: all
+tasks:
+- name: Ensure application is running
+service:
+name: my_application
+state: started
+- name: Deploy the latest application version
+copy:
+src: /path/to/my_application
+dest: /path/to/deployment
