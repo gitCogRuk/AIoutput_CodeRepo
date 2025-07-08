@@ -1,0 +1,6 @@
+# Chaos Engineering Scenarios
+Scenario: Simulate Payment Processing Downtime
+1. Introduce latency in the payment processing service for 30 seconds.
+2. Monitor system behaviors and error rates.
+3. Validate that fallback mechanisms are triggered.
+4. Document the impact on user experience and transaction completion rates.

@@ -1,0 +1,11 @@
+# Ansible playbook for deploying the SEPA payment service
+- hosts: payment_service
+tasks:
+- name: Deploy application
+copy:
+src: /local/path/to/app
+dest: /remote/path/to/app
+- name: Restart service
+service:
+name: sepa_payment_service
+state: restarted

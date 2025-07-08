@@ -1,0 +1,15 @@
+# JMeter script for Load Testing
+Test Plan
+Thread Group (5000 users)
+HTTP Request Sampler
+Method: POST
+URL: http:#api.bank.com/payment/receive
+Body:
+{
+"amount": "50000",
+"currency": "EUR",
+"accountId": "1234567890"
+}
+Response Assertions
+Response Code: 200
+Response Time: < 120000
