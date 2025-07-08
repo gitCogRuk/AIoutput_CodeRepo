@@ -1,0 +1,14 @@
+---
+- name: Deploy Portfolio Application
+hosts: production
+tasks:
+- name: Ensure Java is installed
+apt:
+name: openjdk-11-jdk
+state: present
+- name: Deploy application
+copy:
+src: /path/to/your/build/
+dest: /opt/portfolio-app/
+- name: Start application
+command: nohup java -jar /opt/portfolio-app/portfolio-app.jar &

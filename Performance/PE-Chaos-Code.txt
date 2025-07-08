@@ -1,0 +1,16 @@
+{
+"chaosScenario": {
+"name": "Network Latency",
+"description": "Introduce latency in the API response to test system behavior under stress.",
+"type": "latency",
+"duration": "120s",
+"latency": "2000ms",
+"affectedServices": [
+{
+"name": "Portfolio API",
+"endpoint": "/api/portfolios"
+}
+],
+"expectedOutcome": "System should handle the delay without crashing, maintaining functionality."
+}
+}

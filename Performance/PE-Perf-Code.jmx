@@ -1,0 +1,32 @@
+<testPlan>
+<hashTree>
+<ThreadGroup>
+<stringProp name="ThreadGroup.num_threads">5000</stringProp>
+<stringProp name="ThreadGroup.ramp_time">120</stringProp>
+<stringProp name="ThreadGroup.duration">120</stringProp>
+<stringProp name="ThreadGroup.scheduler">true</stringProp>
+</ThreadGroup>
+<hashTree>
+<HTTPSamplerProxy>
+<stringProp name="HTTPSampler.domain">yourdomain.com</stringProp>
+<stringProp name="HTTPSampler.port">80</stringProp>
+<stringProp name="HTTPSampler.path">/api/portfolios</stringProp>
+<stringProp name="HTTPSampler.method">POST</stringProp>
+<elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+<argument>
+<stringProp name="Argument.name">serviceType</stringProp>
+<stringProp name="Argument.value">Corporation of Lloyds</stringProp>
+</argument>
+<argument>
+<stringProp name="Argument.name">member</stringProp>
+<stringProp name="Argument.value">VALIDMEMBER</stringProp>
+</argument>
+<argument>
+<stringProp name="Argument.name">accountNumber</stringProp>
+<stringProp name="Argument.value">1234567890</stringProp>
+</argument>
+</elementProp>
+</HTTPSamplerProxy>
+</hashTree>
+</hashTree>
+</testPlan>
