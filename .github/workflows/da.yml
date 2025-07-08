@@ -1,0 +1,11 @@
+- hosts: all
+tasks:
+- name: Deploy Portfolio Service
+docker_container:
+name: portfolio_service
+image: your-image-name:latest
+state: started
+exposed_ports:
+- "80"
+published_ports:
+- "80:80"

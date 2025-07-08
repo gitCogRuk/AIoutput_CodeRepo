@@ -1,0 +1,11 @@
+Thread Group
+Number of Threads: 5000
+Ramp-Up Period: 120 seconds
+Loop Count: Forever
+HTTP Request Defaults
+Server Name or IP: your-api-server.com
+Protocol: http
+HTTP Request
+Path: /api/portfolio
+Method: POST
+Body Data: { "colMember": "Valid123", "colSettlementNo": "1234567890" }

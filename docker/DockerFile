@@ -1,0 +1,4 @@
+# Dockerfile for Portfolio Service
+FROM openjdk:11-jre-slim
+COPY target/portfolio-service.jar /app/portfolio-service.jar
+ENTRYPOINT ["java", "-jar", "/app/portfolio-service.jar"]

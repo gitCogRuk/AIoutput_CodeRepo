@@ -1,0 +1,17 @@
+{
+"scenarios": [
+{
+"name": "Terminate Random Microservice",
+"description": "Randomly terminate a microservice handling portfolio creation",
+"action": "kill",
+"target": "portfolio-service"
+},
+{
+"name": "Introduce Network Latency",
+"description": "Introduce 200ms latency in network calls to the portfolio service",
+"action": "latency",
+"target": "portfolio-service",
+"latency": "200ms"
+}
+]
+}
